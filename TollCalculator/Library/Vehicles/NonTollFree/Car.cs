@@ -1,6 +1,6 @@
-﻿namespace TollCalculator.Library;
+﻿namespace TollCalculator.Library.Vehicles.NonTollFree;
 
-using Vehicles.NonTollFree.Base;
+using Base;
 
 public class Car
 : NonTollFreeVehicleBase, INonTollFreeVehicle

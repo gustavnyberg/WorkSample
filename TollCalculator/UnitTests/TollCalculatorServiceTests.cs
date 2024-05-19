@@ -10,9 +10,16 @@ using Xunit;
 
 public class TollCalculatorServiceTests : IClassFixture<DependencyInjectionFixture>
 {
-    private readonly ITollCalculatorService _tollCalculatorService;
-    private readonly Car _fakeCar;
-    private readonly Motorbike _fakeMotorbike;
+    public TollCalculatorServiceTests(DependencyInjectionFixture fixture)
+    {
+        _tollCalculatorService = fixture.ServiceProvider.GetRequiredService<ITollCalculatorService>();
+
+        _fakeCar = A.Fake<Car>();
+        A.CallTo(() => _fakeCar.IsTollFree()).Returns(false);
+
+        _fakeMotorbike = A.Fake<Motorbike>();
+        A.CallTo(() => _fakeMotorbike.IsTollFree()).Returns(true);
+    }
 
     [Fact]
     public void GetTollFee_ShouldReturnZero_WhenDateIsTollFree()
@@ -46,17 +53,6 @@ public class TollCalculatorServiceTests : IClassFixture<DependencyInjectionFixtu
 
         // Assert
         fee.Should().Be(0);
-    }
-
-    public TollCalculatorServiceTests(DependencyInjectionFixture fixture)
-    {
-        _tollCalculatorService = fixture.ServiceProvider.GetRequiredService<ITollCalculatorService>();
-
-        _fakeCar = A.Fake<Car>();
-        A.CallTo(() => _fakeCar.IsTollFree()).Returns(false);
-
-        _fakeMotorbike = A.Fake<Motorbike>();
-        A.CallTo(() => _fakeMotorbike.IsTollFree()).Returns(true);
     }
 
     [Fact]
@@ -179,4 +175,8 @@ public class TollCalculatorServiceTests : IClassFixture<DependencyInjectionFixtu
         // Assert
         fee.Should().Be(13);
     }
+
+    private readonly ITollCalculatorService _tollCalculatorService;
+    private readonly Car _fakeCar;
+    private readonly Motorbike _fakeMotorbike;
 }

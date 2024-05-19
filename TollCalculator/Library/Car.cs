@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace TollCalculator.Library;
 
-namespace TollFeeCalculator
+using Vehicles.NonTollFree.Base;
+
+public class Car
+: NonTollFreeVehicleBase, INonTollFreeVehicle
 {
-    public class Car : Vehicle
-    {
-        public String GetVehicleType()
-        {
-            return "Car";
-        }
-    }
+    public override bool IsTollFree()
+        => false;
 }

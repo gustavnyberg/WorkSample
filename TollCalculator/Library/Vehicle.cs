@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace TollCalculator.Library;
 
-namespace TollFeeCalculator
+public abstract class Vehicle
+    : IVehicle
 {
-    public interface Vehicle
-    {
-        String GetVehicleType();
-    }
+    public abstract bool IsTollFree();
+
+    public abstract string GetVehicleType();
 }

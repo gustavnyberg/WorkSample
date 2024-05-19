@@ -3,11 +3,11 @@
 using System;
 using System.Collections.Generic;
 
-public static class TollFreeDateTimeExtensions
+public static class TollFeeDateTimeExtensions
 {
     private static readonly HashSet<DateTime> TollFreeDates;
 
-    static TollFreeDateTimeExtensions()
+    static TollFeeDateTimeExtensions()
     {
         TollFreeDates = CreateTollFreeDates();
     }

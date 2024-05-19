@@ -5,7 +5,7 @@ using Library.Extensions.TollFee;
 using Xunit;
 using DateTime = System.DateTime;
 
-public class TollFreeDateTimeExtensionsTests
+public class TollFeeDateTimeExtensionsTests
 {
     [Theory]
     [InlineData(2013, 1, 1)] // New Year's Day

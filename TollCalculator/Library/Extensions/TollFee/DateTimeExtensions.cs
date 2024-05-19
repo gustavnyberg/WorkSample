@@ -9,7 +9,7 @@ public static class TollFeeDateTimeExtensions
 
     static TollFeeDateTimeExtensions()
     {
-        TollFreeDates = CreateTollFreeDates();
+        TollFreeDates = GetTollFreeDates();
     }
 
     /// <summary>
@@ -40,7 +40,7 @@ public static class TollFeeDateTimeExtensions
     /// Creates the set of toll-free dates.
     /// </summary>
     /// <returns>A HashSet of toll-free dates.</returns>
-    private static HashSet<DateTime> CreateTollFreeDates()
+    private static HashSet<DateTime> GetTollFreeDates()
     {
         var tollFreeDates = new HashSet<DateTime>
         {
@@ -62,15 +62,16 @@ public static class TollFeeDateTimeExtensions
             new(2013, 12, 26),
             new(2013, 12, 31)
         };
+        
         // All dates in July
-        AddAllDatesInJuly(tollFreeDates);
+        AddAllDatesInJulyTo(tollFreeDates);
         return tollFreeDates;
     }
     /// <summary>
     /// Adds all dates in July to the set of toll-free dates.
     /// </summary>
     /// <param name="dates">The set of toll-free dates.</param>
-    private static void AddAllDatesInJuly(HashSet<DateTime> dates)
+    private static void AddAllDatesInJulyTo(HashSet<DateTime> dates)
     {
         for (var day = 1; day <= 31; day++)
             dates.Add(new DateTime(2013, 7, day));

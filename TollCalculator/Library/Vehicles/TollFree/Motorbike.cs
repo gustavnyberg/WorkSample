@@ -1,6 +1,6 @@
 ﻿namespace TollCalculator.Library.Vehicles.TollFree;
 
-using TollFree.Base;
+using Base;
 
 public class Motorbike
     : TollFreeVehicleBase

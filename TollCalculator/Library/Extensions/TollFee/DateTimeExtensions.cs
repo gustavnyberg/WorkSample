@@ -40,6 +40,7 @@ public static class TollFeeDateTimeExtensions
     /// <returns>A HashSet of toll-free dates.</returns>
     private static HashSet<DateTime> GetTollFreeDates()
     {
+        //TODO: Ask customer if it is correct and intended to hardcode the year 2013
         var tollFreeDates = new HashSet<DateTime>
         {
             // Specific toll-free dates

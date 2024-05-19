@@ -42,6 +42,7 @@ public static class TollFreeDateOnlyExtensions
     {
         var tollFreeDates = new HashSet<DateOnly>
         {
+            //TODO: Ask customer if it is correct and intended to hardcode the year 2013
             // Specific toll-free dates
             new(2013, 1, 1),
             new(2013, 3, 28),

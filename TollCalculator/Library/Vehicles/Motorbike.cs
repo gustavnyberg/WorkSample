@@ -1,4 +1,4 @@
-﻿namespace TollCalculator.Library.Vehicles;
+﻿namespace TollCalculator.Library.Vehicles.TollFree;
 
 using TollFree.Base;
 

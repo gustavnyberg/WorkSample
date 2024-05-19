@@ -16,8 +16,8 @@ public int GetTollFee(IVehicle vehicle, DateTime[] dates)
             intervalStart = date;
         }
 
-        if (totalFee.IsMaxFeePerDate())
-            totalFee = TollFeeExtensions.GetMaxFeePerDate();
+        if (totalFee.IsMaxFeePerDay())
+            totalFee = TollFeeExtensions.GetMaxFeePerDay();
 
         return totalFee;
     }

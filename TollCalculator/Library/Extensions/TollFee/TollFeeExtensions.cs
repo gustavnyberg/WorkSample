@@ -2,7 +2,7 @@
 
 public static class TollFeeExtensions
 {
-    public static bool IsMaxFeePerDate(this int fee) => fee > 60;
+    public static bool IsMaxFeePerDay(this int fee) => fee > 60;
 
-    public static int GetMaxFeePerDate() => 60;
+    public static int GetMaxFeePerDay() => 60;
 }

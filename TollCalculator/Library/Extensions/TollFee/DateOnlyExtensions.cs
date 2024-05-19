@@ -7,10 +7,8 @@ public static class TollFreeDateOnlyExtensions
 {
     private static readonly HashSet<DateOnly> TollFreeDates;
 
-    static TollFreeDateOnlyExtensions()
-    {
-        TollFreeDates = GetTollFreeDates();
-    }
+    static TollFreeDateOnlyExtensions() 
+        => TollFreeDates = GetTollFreeDates();
 
     /// <summary>
     /// Checks if a date is toll-free.
@@ -37,7 +35,7 @@ public static class TollFreeDateOnlyExtensions
         TollFreeDates.Contains(date);
 
     /// <summary>
-    /// Creates the set of toll-free dates.
+    /// Gets the set of toll-free dates.
     /// </summary>
     /// <returns>A HashSet of toll-free dates.</returns>
     private static HashSet<DateOnly> GetTollFreeDates()

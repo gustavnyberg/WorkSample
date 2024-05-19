@@ -9,7 +9,7 @@ public class DependencyInjectionFixture
     public DependencyInjectionFixture()
     {
         var serviceCollection = new ServiceCollection();
-        serviceCollection.AddTransient<ITollCalculator, TollCalculator>();
+        serviceCollection.AddTransient<ITollCalculatorService, TollCalculatorService>();
         // Add other services
         ServiceProvider = serviceCollection.BuildServiceProvider();
     }

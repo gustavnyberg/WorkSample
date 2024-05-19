@@ -1,4 +1,4 @@
-﻿namespace TollCalculator.Library;
+﻿namespace TollCalculator.Library.Vehicles.Base;
 
 public interface IVehicle
 {

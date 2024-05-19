@@ -1,8 +1,7 @@
 ﻿namespace TollCalculator.Library.Vehicles.NonTollFree.Base;
 
-using Library;
 using TollFree.Base;
-
+using Vehicles.Base;
 
 public abstract class NonTollFreeVehicleBase
     : VehicleBase, ITollFreeVehicle
@@ -12,6 +11,6 @@ public abstract class NonTollFreeVehicleBase
 
     public override string GetVehicleType()
     {
-        return GetType().Name; // This will return the type of the derived class
+        return GetType().Name;
     }
 }

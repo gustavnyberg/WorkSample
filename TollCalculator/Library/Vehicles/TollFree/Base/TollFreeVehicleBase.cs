@@ -1,5 +1,7 @@
 ﻿namespace TollCalculator.Library.Vehicles.TollFree.Base;
 
+using Vehicles.Base;
+
 public abstract class TollFreeVehicleBase
     : VehicleBase, ITollFreeVehicle
 {

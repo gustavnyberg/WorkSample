@@ -1,5 +1,7 @@
 ﻿namespace TollCalculator.Library;
 
+using Vehicles.Base;
+
 public class TollCalculatorApp
 {
 

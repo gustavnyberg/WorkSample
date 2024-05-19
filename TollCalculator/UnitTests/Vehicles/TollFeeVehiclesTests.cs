@@ -1,7 +1,7 @@
 ﻿namespace TollCalculator.UnitTests.Vehicles;
 
 using FluentAssertions;
-using Library;
+using Library.Vehicles.Base;
 using TollCalculator.Library.Vehicles.NonTollFree;
 using TollCalculator.Library.Vehicles.TollFree;
 using Xunit;

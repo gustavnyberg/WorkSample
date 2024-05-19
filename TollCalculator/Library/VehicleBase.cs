@@ -1,6 +1,6 @@
 ﻿namespace TollCalculator.Library;
 
-public abstract class Vehicle
+public abstract class VehicleBase
     : IVehicle
 {
     public abstract bool IsTollFree();

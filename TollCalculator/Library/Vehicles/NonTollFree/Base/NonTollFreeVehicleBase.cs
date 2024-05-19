@@ -5,7 +5,7 @@ using TollFree.Base;
 
 
 public abstract class NonTollFreeVehicleBase
-    : Vehicle, ITollFreeVehicle
+    : VehicleBase, ITollFreeVehicle
 {
     public override bool IsTollFree() 
         => true;

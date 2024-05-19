@@ -1,4 +1,4 @@
-namespace TollCalculator.UnitTests;
+namespace TollCalculator.UnitTests.Services.Calculator;
 
 using FakeItEasy;
 using FluentAssertions;
@@ -159,7 +159,7 @@ public class TollCalculatorServiceTests : IClassFixture<DependencyInjectionFixtu
         fee.Should().Be(expectedFee);
     }
 
-[Fact]
+    [Fact]
     public void GetTollFee_ShouldReturnCorrectFee_ForMultiplePassagesWithinSameFeeBracket()
     {
         // Arrange
